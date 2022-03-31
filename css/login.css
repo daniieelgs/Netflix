@@ -1,0 +1,171 @@
+@import url(keyframes.css);
+
+@font-face {
+    font-family: 'Digit';
+    src: url("../fonts/DS-DIGI.TTF");
+}
+
+body{
+    overflow: hidden;
+    background-color: black;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#login{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(0, 0, 0);
+
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    /*background-image: url("../images/Background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;*/
+
+}
+
+#login .background{
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    position: absolute;
+    z-index: 1;
+
+    opacity: 0;
+
+    animation-name: aparecerBcg;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    /*animation-play-state: paused;*/
+    animation-delay: 1s;
+
+}
+
+#login #bcLogin.badPassLogin{
+    opacity: 0.5;
+    animation-name: badPassword;
+    animation-duration: 1s;
+}
+
+#login .login_pass{
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login_pass label{
+    color: rgb(0, 128, 0);
+    text-align: center;
+    font-weight: bold;
+    font-size: 4em;
+    opacity: 0;
+    animation-name: aparecerLabel;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+.login_pass input[type="date"], .login_pass input[type="date"]:disabled{
+    
+    font-size: 4em;
+        
+    color: black;
+        
+    padding: 10px;
+        
+    border-radius: 30px;
+        
+    background-color: rgb(0, 128, 0);
+        
+    border: 5px solid black;
+        
+    opacity: 0;
+        
+    animation-name: aparecerPass;
+        
+    animation-duration: 3s;
+        
+    animation-fill-mode: forwards;
+        
+    animation-delay: 3s;
+}
+
+.alert-not-yet{
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 500;
+
+}
+
+.alert-not-yet .error-container{
+
+    opacity: 0;
+
+    width: 400px;
+
+    height: 200px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: rgb(168, 0, 0);
+
+    border: 4px rgb(255, 255, 255) solid;
+
+    color: white;
+
+    font-family: 'Digit', Arial, Helvetica, sans-serif;
+
+    font-size: 4em;
+
+    font-weight: bolder;
+
+    animation-name: aparecerCuentaAtras;
+    animation-duration: 0;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes aparecerCuentaAtras {
+    
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+
+}

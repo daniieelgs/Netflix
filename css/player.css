@@ -1,0 +1,214 @@
+#player{
+
+position: relative;
+
+width: 100vw;
+
+height: 100vh;
+}
+
+#player video{
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+.controlers{
+
+    width: 100%;
+
+    height: 100px;
+
+    position: absolute;
+
+    z-index: 100;
+
+    bottom: 0;
+
+    left: 0;
+
+    transition: opacity 1s;
+}
+
+.controlers > div:first-child{
+
+    width: 100%;
+    height: 30%;
+
+}
+
+.controlers > div:last-child{
+    width: 100%;
+    height: 70%;
+}
+
+.timer{
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    padding: 0 10px;
+
+    box-sizing: border-box;
+
+}
+
+.line-timer{
+
+    width: 95%;
+
+    height: 3px;
+
+    background-color: gray;
+
+    border-radius: 2px;
+
+}
+
+.time-duration{
+
+    color: white;
+    margin-left: 10px;
+
+    font-size: 1em;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.cursor-timer{
+
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+
+    background-color: rgb(255, 0, 0);
+
+    top: calc(50% - 7.5x);
+    left: 7.5px;
+
+    border-radius: 100%;
+
+}
+
+.button-container > div{
+
+width: 33.33%;
+
+height: 100%;
+
+float: left;
+
+display: flex;
+
+flex-direction: row;
+
+justify-content: center;
+
+align-items: center;
+
+gap: 20px;
+
+padding: 0 10px;
+
+box-sizing: border-box;
+
+color: white;
+
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.button-container > div:first-child{
+
+    justify-content: flex-start;
+
+}
+
+.button-container > div:last-child{
+
+    justify-content: flex-end;
+
+}
+
+.button-container .icon-button{
+
+width: 40px;
+
+height: 40px;
+
+transition-property: all;
+
+transition-duration: .5s;
+
+cursor: pointer;
+
+background-repeat: no-repeat;
+
+background-size: contain;
+
+background-position: center;
+}
+
+.button-container .icon-button:hover{
+
+    width: 50px;
+    height: 50px;
+
+    transition-property: all;
+    transition-duration: .5s;
+
+}
+
+span.play-button{
+
+    background-image: url("../images/icons/play-player.png");
+
+}
+
+.pause-button{
+
+    background-image: url("../images/icons/pausa-player.png");
+
+}
+
+.volumen-button{
+
+    background-image: url("../images/icons/unmuted-player.png");
+
+}
+
+.volumen-muted-button{
+    background-image: url("../images/icons/muted-player.png");
+}
+
+.controlers-top{
+
+position: absolute;
+
+width: 100%;
+
+height: 50px;
+
+top: 0;
+
+left: 0;
+
+display: flex;
+
+flex-direction: row;
+
+justify-content: space-between;
+
+padding: 15px;
+
+z-index: 100;
+
+box-sizing: border-box;
+}
